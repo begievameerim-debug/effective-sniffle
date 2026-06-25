@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мамасабирова Мээрим Мирбековна | Portfolio</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2, #6dd5ed);
+            background-size: 300% 300%;
+            animation: bgMove 10s infinite;
+            min-height: 100vh;
+        }
+        
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+        }
+        
+        .profile {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 0 30px rgba(255, 255, 255, .5);
+        }
+        
+        .hero h1 {
+            margin-top: 20px;
+            font-size: 42px;
+        }
+        
+        .hero p {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 12px;
+            background: #ffffff;
+            color: #5b4bdb;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+        }
+        
+        .card {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 30px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, .95);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+        }
+        
+        .card h2 {
+            color: #5b4bdb;
+            margin-bottom: 20px;
+        }
+        
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .skill {
+            margin-bottom: 20px;
+        }
+        
+        .bar {
+            height: 14px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .bar div {
+            height: 100%;
+            background: #667eea;
+        }
+        
+        .project {
+            background: #f5f7ff;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .project ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .game-card {
+            text-align: center;
+        }
+        
+        #login input, #answer {
+            width: 100%;
+            max-width: 400px;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        #game {
+            display: none;
+        }
+        
+        #question {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        #result {
+            font-size: 22px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+        
+        @media(max-width: 768px){
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Meri Portfolio</div>
+    <ul>
+        <li><a href="#about">Мен жөнүндө</a></li>
+        <li><a href="#skills">Көндүмдөр</a></li>
+        <li><a href="#projects">Долбоорлор</a></li>
+        <li><a href="#contact">Байланыш</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <img src="Снимок экрана 2025-05-30 120203.png" class="profile" alt="Профиль сүрөтү">
+    <h1>Мамасабирова Мээрим Мирбековна</h1>
+    <p>Жумаш Раимкулов атындагы кесиптик лицейдин бүтүрүүчүсү</p>
+</header>
+
+<section id="about" class="card">
+    <h2>Мен жөнүндө</h2>
+    <p>
+        Мен веб-технологияларга кызыгам.
+        HTML, CSS жана Figma менен иштегенди үйрөндүм.
+        Командада иштөөнү жакшы көрөм жана
+        жаңы билимдерди өздөштүрүүгө аракет кылам.
+    </p>
+</section>
+
+<section id="skills" class="card">
+    <h2>Көндүмдөр</h2>
+    <div class="skill">
+        <span>HTML</span>
+        <div class="bar">
+            <div style="width:90%"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <span>CSS</span>
+        <div class="bar">
+            <div style="width:85%"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <span>Figma</span>
+        <div class="bar">
+            <div style="width:80%"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <span>Microsoft Word</span>
+        <div class="bar">
+            <div style="width:90%"></div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="card">
+    <h2>Менин долбоорлорум</h2>
+    <div class="project">
+        <h3>🧮 Math Kids Adventure</h3>
+        <p>Башталгыч класстар үчүн математикалык оюн.</p>
+        <ul>
+            <li>Атын жазып кирүү</li>
+            <li>Таймер</li>
+            <li>Упай системасы</li>
+            <li>4 деңгээл</li>
+        </ul>
+    </div>
+</section>
+
+<section id="gameSection" class="card game-card">
+    <h2>🎮 Math Kids Adventure</h2>
+    <div id="login">
+        <input type="text" id="playerName" placeholder="Атыңды киргиз">
+        <button onclick="startGame()">Оюнду баштоо</button>
+    </div>
+    <div id="game">
+        <h3>Упай: <span id="score">0</span></h3>
+        <h3>Убакыт: <span id="timer">60</span></h3>
+        <h3>Деңгээл: <span id="level">1</span></h3>
+        <div id="question"></div>
+        <input type="number" id="answer" placeholder="Жооп">
+        <button onclick="checkAnswer()">Жооп берүү</button>
+        <p id="result"></p>
+    </div>
+</section>
+
+<section id="contact" class="card">
+    <h2>Байланыш</h2>
+    <p>📞 0709 432 009</p>
+    <p>📧 Begievameerim7@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Мамасабирова Мээрим Мирбековна
+</footer>
+
+<script>
+let score = 0;
+let timeLeft = 60;
+let level = 1;
+let currentAnswer = 0;
+let timerInterval;
+let playerName = "";
+
+function startGame() {
+    const nameInput = document.getElementById("playerName").value.trim();
+    
+    if (nameInput === "") {
+        alert("Сураныч, алгач атыңызды киргизиңиз!");
+        return;
+    }
+    
+    playerName = nameInput;
+    score = 0;
+    timeLeft = 60;
+    level = 1;
+    
+    document.getElementById("score").innerText = score;
+    document.getElementById("timer").innerText = timeLeft;
+    document.getElementById("level").innerText = level;
+    document.getElementById("result").innerText = "";
+    document.getElementById("answer").value = "";
+    
+    document.getElementById("login").style.display = "none";
+    document.getElementById("game").style.display = "block";
+    
+    generateQuestion();
+    startTimer();
+}
+
+function generateQuestion() {
+    let num1, num2, operator;
+    
+    if (level === 1) {
+        num1 = Math.floor(Math.random() * 10) + 1;
+        num2 = Math.floor(Math.random() * 10) + 1;
+        operator = "+";
+        currentAnswer = num1 + num2;
+    } else if (level === 2) {
+        num1 = Math.floor(Math.random() * 20) + 10;
+        num2 = Math.floor(Math.random() * num1) + 1;
+        operator = "-";
+        currentAnswer = num1 - num2;
+    } else if (level === 3) {
+        num1 = Math.floor(Math.random() * 8) + 2;
+        num2 = Math.floor(Math.random() * 9) + 2;
+        operator = "*";
+        currentAnswer = num1 * num2;
+    } else {
+        num1 = Math.floor(Math.random() * 50) + 10;
+        num2 = Math.floor(Math.random() * 40) + 10;
+        operator = Math.random() > 0.5 ? "+" : "-";
+        currentAnswer = operator === "+" ? num1 + num2 : num1 - num2;
+    }
+    
+    document.getElementById("question").innerText = `${num1} ${operator} ${num2} = ?`;
+}
+
+function checkAnswer() {
+    const answerInput = document.getElementById("answer");
+    const userAnswer = parseInt(answerInput.value);
+    const resultElement = document.getElementById("result");
+    
+    if (isNaN(userAnswer)) {
+        resultElement.style.color = "#e67e22";
+        resultElement.innerText = "Жоопту киргизиңиз!";
+        return;
+    }
+    
+    if (userAnswer === currentAnswer) {
+        score += 10;
+        resultElement.style.color = "#2ecc71";
+        resultElement.innerText = "Туура! 🎉";
+        
+        if (score >= 90) {
+            level = 4;
+        } else if (score >= 60) {
+            level = 3;
+        } else if (score >= 30) {
+            level = 2;
+        }
+    } else {
+        resultElement.style.color = "#e74c3c";
+        resultElement.innerText = `Ката! Туура жооп: ${currentAnswer} 😢`;
+    }
+    
+    document.getElementById("score").innerText = score;
+    document.getElementById("level").innerText = level;
+    
+    answerInput.value = "";
+    answerInput.focus();
+    generateQuestion();
+}
+
+function startTimer() {
+    clearInterval(timerInterval);
+    
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").innerText = timeLeft;
+        
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            endGame();
+        }
+    }, 1000);
+}
+
+function endGame() {
+    document.getElementById("game").style.display = "none";
+    document.getElementById("login").style.display = "block";
+    
+    const resultElement = document.getElementById("result");
+    resultElement.style.color = "#5b4bdb";
+    resultElement.innerText = `Убакыт бүттү! ${playerName}, сиздин упайыңыз: ${score}`;
+    
+    document.getElementById("playerName").value = "";
+    document.getElementById("playerName").placeholder = "Кайра ойноо үчүн атыңды жаз";
+}
+
+document.getElementById("answer").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        checkAnswer();
+    }
+});
+</script>
+</body>
+</html>
